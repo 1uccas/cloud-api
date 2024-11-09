@@ -10,5 +10,22 @@ $api = json_decode(file_get_contents($url));
 //full results in API
 $results = $api->results;
 
+$results_tomorrow = $results->forecast[1]; //FULL RESULTS OF TOMORROW!
+
+$date = $results->date;
+$hour_time = $results->time;
+$condition_description = $results->description;
+$currently = $results->currently;
+
+$city = $results->city;
+
+#echo $results_tomorrow->description;
+
+
+print($city."<br>");
+print($currently."<br>");
+print($condition_description."<br>");
+print($hour_time."<br>");
+print($date."<br>");
 print_r($results);
 ?>
