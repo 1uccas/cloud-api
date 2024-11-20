@@ -92,6 +92,8 @@ class API{
         $this->picture_condition_slug = "https://assets.hgbrasil.com/weather/icons/conditions/{$this->condition_slug}.svg";
 	}
 
+
+	//Adicionando getters para ler o conteudo das variaveis criadas!!!
 	public function getDate()
 	{
 	    return $this->date;
