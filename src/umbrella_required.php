@@ -1,4 +1,5 @@
 <?php 
+
 //full results in API
 $results = $api->results;
 
@@ -29,33 +30,6 @@ $req_condition_slug = $condition_description;
 $picture_monn = "https://assets.hgbrasil.com/weather/icons/moon/$moon.png";
 $picture_condition_slug = "https://assets.hgbrasil.com/weather/icons/conditions/$condition_slug.svg";
 
-echo "
-	$date - $hour_time - $currently
-	<br>
-	$city - $condition_description
-	<br>
-	<br>
-	Úmidade: $humidity%
-	<br>
-	Nebulosidade: $cloudiness%
-	<br>
-	Chuva: $rain%
-	<br>
-	Velocidade do Vento: $wind_speedy
-	<br>
-	Direção do Vento: $wind_direction - $wind_cardinal
-	<br>
-	Nascer do Sol: $sunrise
-	<br>
-	Pôr do Sol: $sunset
-	<br>
-	Fase da Lua: <img src='$picture_monn'>
-	<br>
-	Condição de Tempo: <img src='$picture_condition_slug'>
-	<br>
-
-";
-
-print_r($results);
+//print_r($results)
 
 ?>
