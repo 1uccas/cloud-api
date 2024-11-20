@@ -1,5 +1,5 @@
 <?php 
- 	require 'src/umbrella_required.php';
+ 	require 'src/take_data_api.php';
 ?>
 <!DOCTYPE html>
 <html>
