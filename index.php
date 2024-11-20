@@ -7,5 +7,5 @@ $API_KEY = getenv('API_KEY');
 $url = "https://api.hgbrasil.com/weather?woeid=455830?key=".$API_KEY;
 $api = json_decode(file_get_contents($url));
 
-require 'src/umbrella_required.php';
+require 'src/show_api.php';
 ?>
