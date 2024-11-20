@@ -27,7 +27,7 @@ class API{
 
 	public function __construct($apiData){
 		$this->apiData = $apiData; // <-- recebe dados da api e passa para essa variavel
-		$this->loadWeatherData();
+		$this->loadWeatherData(); // < -- carrega o metodo abaixo com as variaveis com seus dados
 	}
 
 	private function loadWeatherData(){
@@ -57,7 +57,7 @@ class API{
 	}
 
 
-	//Adicionando getters para ler o conteudo das variaveis criadas!!!
+	//Adicionando getters para ler o conteudo das variaveis criadas quando for acessada a classe!!!
 	public function getDate()
 	{
 	    return $this->date;
