@@ -1,34 +1,106 @@
-*{
-	padding: 0;
-	border: 0;
-	margin: 0;
-}
-.container_information_city{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 20px;
-	padding: 1.5rem;
-}
-
-.container_cloud_information_master{
-	display: flex;
-	flex-direction: column;
-	margin-top: 20px;
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #87CEEB, #4682B4); /* Sky blue gradient */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-label {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	padding: 0.3rem 0rem 0.3rem 0.4rem; 
+main.main_master {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    border-radius: 20px;
+    padding: 20px 30px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1.2s ease-in-out;
 }
 
-.img_picture_moon, 
-.img_picture_condition_slug {
-	width: 24px;  
-	height: 24px; 
-	object-fit: contain; 
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
+/* Section Styles */
+.container_information_city,
+.container_cloud_information_master {
+    margin-bottom: 20px;
+}
+
+.container_information_city label {
+    display: block;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.container_cloud_information_master label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 1em;
+    gap: 8px;
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: inset 0px 2px 5px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on labels */
+.container_cloud_information_master label:hover {
+    background: rgba(255, 255, 255, 0.4); /* Lighter background */
+    transform: translateY(-4px); /* Slightly raised effect */
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3); /* Shadow to highlight the label */
+}
+
+/* Image Styles */
+img.img_picture_moon,
+img.img_picture_condition_slug {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img.img_picture_moon:hover,
+img.img_picture_condition_slug:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    main.main_master {
+        padding: 15px 20px;
+    }
+
+    .container_information_city label {
+        font-size: 1.2em;
+    }
+
+    .container_cloud_information_master label {
+        font-size: 0.9em;
+    }
+
+    img.img_picture_moon,
+    img.img_picture_condition_slug {
+        width: 25px;
+        height: 25px;
+    }
+}
